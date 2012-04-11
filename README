@@ -1,0 +1,30 @@
+====================================
+
+ Gzry URL短縮君
+
+    @author R.SkuLL
+
+===================================
+
+ 使い方
+    http://gzry.tk/api.php?url=[短縮したいURL]
+    この形式でアクセスすると短縮URLが返ってきます。
+
+ 
+ サンプル
+
+    <?php
+
+        define('GZRY_API', 'http://gzry.tk/api.php');
+        function gzry ($url) {
+            return file_get_contents(GZRY_API.'?url='.$url);
+        }
+
+        $gzry = gzry('http://example.com');
+    ?>
+ 
+ その他
+    ２４時間で削除されます。
+    簡易版なのでファイル操作で簡単につくってあります。
+
+====================================
